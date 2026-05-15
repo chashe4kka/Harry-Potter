@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гриффиндор — Хогвартс</title>
+    <link rel="icon" href="/home/student/Загрузки/1736307-middle.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Lora', serif;
+            background: linear-gradient(135deg, #1a0000 0%, #4a0000 30%, #740001 60%, #4a0000 100%);
+            color: #e8c84a;
+            min-height: 100vh;
+        }
+
+        nav {
+            position: fixed; top: 0; left: 0; right: 0;
+            background: rgba(26, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 40px;
+            display: flex; justify-content: space-between; align-items: center;
+            z-index: 1000;
+            border-bottom: 2px solid rgba(206, 164, 43, 0.3);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif; font-size: 1.8rem; font-weight: 900;
+            color: #ceaa2b; letter-spacing: 2px;
+        }
+
+        .nav-links { display: flex; list-style: none; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .nav-links a {
+            color: #e8c84a; text-decoration: none; padding: 8px 16px;
+            border-radius: 25px; font-size: 0.9rem; transition: all 0.3s ease;
+            border: 1px solid transparent; font-family: 'Cinzel', serif;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(206, 164, 43, 0.2); border-color: rgba(206, 164, 43, 0.5);
+            color: #fff; transform: translateY(-2px);
+        }
+
+        .hero {
+            min-height: 100vh; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; text-align: center;
+            padding: 120px 20px 60px;
+        }
+
+        .hero-icon { font-size: 6rem; margin-bottom: 20px; }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif; font-size: 4rem; font-weight: 900;
+            color: #ffd700; margin-bottom: 10px; letter-spacing: 4px;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem; color: #ceaa2b; font-style: italic; margin-bottom: 30px;
+        }
+
+        .hero p.description {
+            font-size: 1.1rem; max-width: 700px; line-height: 1.8;
+            color: #d4a84a; margin-bottom: 40px;
+        }
+
+        .content {
+            max-width: 1000px; margin: 0 auto; padding: 40px 20px 80px;
+        }
+
+        .content h2 {
+            font-family: 'Cinzel', serif; font-size: 2rem; color: #ffd700;
+            margin-bottom: 25px; text-align: center; letter-spacing: 2px;
+        }
+
+        .info-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px; margin-top: 40px;
+        }
+
+        .info-card {
+            background: rgba(116, 0, 1, 0.6); border: 1px solid rgba(206, 164, 43, 0.3);
+            border-radius: 15px; padding: 30px; text-align: center;
+            transition: all 0.3s ease;
+        }
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(116, 0, 1, 0.5);
+            border-color: rgba(206, 164, 43, 0.6);
+        }
+        .info-card .icon { font-size: 2.5rem; margin-bottom: 10px; }
+        .info-card h4 { font-family: 'Cinzel', serif; color: #ffd700; margin-bottom: 10px; font-size: 1.2rem; }
+        .info-card p { color: #d4a84a; line-height: 1.6; font-size: 0.95rem; }
+
+        .students-list {
+            list-style: none; display: flex; flex-wrap: wrap;
+            justify-content: center; gap: 15px; margin-top: 30px;
+        }
+        .students-list li {
+            background: rgba(116, 0, 1, 0.5); border: 1px solid rgba(206, 164, 43, 0.2);
+            padding: 10px 20px; border-radius: 50px; color: #e8c84a;
+            font-family: 'Cinzel', serif; font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center; padding: 30px;
+            border-top: 1px solid rgba(206, 164, 43, 0.2);
+            color: #886622; font-size: 0.85rem;
+        }
+        footer a { color: #ceaa2b; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav { flex-direction: column; gap: 10px; padding: 15px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">⚡ Hogwarts</div>
+        <ul class="nav-links">
+            <li><a href="/home/student/Рабочий стол/горелый поттер/index.html" >Главная</a></li>
+            <li><a href="/home/student/Рабочий стол/горелый поттер/facultes.html/griffindor.html"class="active">Гриффиндор</a></li>
+            <li><a href="/home/student/Рабочий стол/горелый поттер/facultes.html/slytherin.html">Слизерин</a></li>
+            <li><a href="/home/student/Рабочий стол/горелый поттер/facultes.html/ravenclaw.html">Когтевран</a></li>
+            <li><a href="/home/student/Рабочий стол/горелый поттер/facultes.html/hufflepuff.html">Пуффендуй</a></li>
+            <li><a href="/home/student/Рабочий стол/горелый поттер/facultes.html/draco.html">Драко Малфой</a></li>
+        </ul>
+    </nav>
+    <section class="hero">
+        <div class="hero-icon">🦁</div>
+        <h1>Гриффиндор</h1>
+        <p class="subtitle">«Гриффиндор — дом храбрых сердцем»</p>
+        <p class="description">
+            Гриффиндор — один из четырёх факультетов Хогвартса, основанный Годриком Гриффиндором.
+            Распределяющая шляпа отправляет сюда тех, кто проявляет храбрость, отвагу, благородство
+            и силу духа. Символ факультета — лев, а цвета — красный и золотой.
+        </p>
+    </section>
+    <section class="content">
+        <h2>📜 О факультете</h2>
+        <p style="text-align:center; color:#d4a84a; line-height:1.8; max-width:800px; margin:0 auto;">
+            Гриффиндор ценит мужество выше всех остальных качеств. Студенты этого факультета
+            известны своей готовностью постоять за правду, даже когда это опасно. Общая комната
+            Гриффиндора расположена в одной из башен Хогвартса, а вход в неё защищён паролем.
+        </p>
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="icon">🏰</div>
+                <h4>Основатель</h4>
+                <p>Годрик Гриффиндор — один из четырёх величайших волшебников своего времени</p>
+            </div>
+            <div class="info-card">
+                <div class="icon">🎨</div>
+                <h4>Цвета</h4>
+                <p>Красный и золотой — символы огня и благородства</p>
+            </div>
+            <div class="info-card">
+                <div class="icon">👻</div>
+                <h4>Призрак</h4>
+                <p>Почти Безголовый Ник (сэр Николас де Мимси-Порпингтон)</p>
+            </div>
+            <div class="info-card">
+                <div class="icon">⭐</div>
+                <h4>Стихия</h4>
+                <p>Огонь — страсть, энергия и неукротимый дух</p>
+            </div>
+            <div class="info-card">
+                <div class="icon">🔮</div>
+                <h4>Декан</h4>
+                <p>Минерва Макгонагалл — профессор трансфигурации</p>
+            </div>
+            <div class="info-card">
+                <div class="icon">⚔️</div>
+                <h4>Меч Гриффиндора</h4>
+                <p>Волшебный меч, сотворённый гоблинами, появляется перед достойным гриффиндорцем</p>
+            </div>
+        </div>
+        <h2 style="margin-top:60px;">🎓 Известные гриффиндорцы</h2>
+        <ul class="students-list">
+            <li>Гарри Поттер</li>
+            <li>Гермиона Грейнджер</li>
+            <li>Рон Уизли</li>
+            <li>Невилл Долгопупс</li>
+            <li>Джинни Уизли</li>
+            <li>Фред Уизли</li>
+            <li>Джордж Уизли</li>
+            <li>Сириус Блэк</li>
+            <li>Римус Люпин</li>
+            <li>Альбус Дамблдор</li>
+            <li>Джеймс Поттер</li>
+            <li>Лили Поттер</li>
+        </ul>
+    </section>
+    <footer>
+        <p>© 2026 Мир Гарри Поттера | <a href="/home/student/Рабочий стол/горелый поттер/index.html">На главную</a></p>
+    </footer>
+</body>
+</html>
